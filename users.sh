@@ -2,7 +2,7 @@ BASE_DIR="/mnt/c/user_management"
 LOG_FILE="$BASE_DIR/user_management.log"
 PASSWORD_FILE="$BASE_DIR/user_passwords.csv"
 if [[ $EUID -ne 0 ]]; then
-    echo "❌ Please run this script as root (use sudo)."
+    echo " Please run this script as root (use sudo)."
     exit 1
 fi
 
@@ -17,7 +17,7 @@ fi
 INPUT_FILE="$1"
 
 if [[ ! -f "$INPUT_FILE" ]]; then
-    echo "❌ File not found: $INPUT_FILE"
+    echo " File not found: $INPUT_FILE"
     exit 1
 fi
 
